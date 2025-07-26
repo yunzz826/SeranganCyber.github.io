@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunia BLACK HAT Hacker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+        body {
+            font-family: 'Share Tech Mono', monospace;
+            background-color: #111;
+            color: #0f0;
+            overflow-x: hidden;
+        }
+        .terminal {
+            background: rgba(0, 0, 0, 0.85);
+            border: 1px solid #333;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.2);
+        }
+        .glow-text {
+            text-shadow: 0 0 5px #0f0;
+        }
+        .hacker-card {
+            transition: all 0.3s ease;
+            border: 1px solid #333;
+        }
+        .hacker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 255, 0, 0.3);
+            border-color: #0f0;
+        }
+        .code-animation {
+            position: relative;
+        }
+        .code-animation::after {
+            content: "|";
+            animation: blink 1s infinite;
+            color: #0f0;
+        }
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+        @keyframes scanline {
+            0% { background-position: 0 -100%; }
+            100% { background-position: 0 100%; }
+        }
+        .matrix-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(rgba(0, 255, 0, 0.03), rgba(0, 255, 0, 0.03)),
+                        url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2 2"><path d="M0 0h2v2H0z" fill="none"/><path d="M0 0h1v1H0z" fill="%2300ff0033"/></svg>');
+            background-size: 5px 5px;
+            animation: scanline 8s linear infinite;
+        }
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end);
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+    </style>
+</head>
+<body>
+    <div class="matrix-bg"></div>
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold glow-text mb-4 typewriter">BLACK HAT HACKER</h1>
+            <div class="terminal inline-block p-4 rounded-lg text-left max-w-2xl mx-auto">
+                <div class="code-animation">root@kali:~# ./exploit --target SYSTEM_ACCESS</div>
+                <div class="code-animation mt-2">[✔] Vulnerability found: CVE-2023-2945</div>
+            </div>
+        </header>
+
+        <section class="mb-16">
+            <div class="terminal p-6 rounded-lg mb-8">
+                <h2 class="text-2xl font-bold glow-text mb-4">Apa Itu BLACK HAT Hacker?</h2>
+                <p class="mb-4">Black hat hacker adalah individu yang menyusup ke sistem komputer dengan niat jahat untuk mencuri data, menyebarkan malware, atau melakukan kegiatan ilegal lainnya.</p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <h3 class="text-xl font-bold glow-text mb-2">Motivasi</h3>
+                        <p>Keuntungan finansial, sabotase, atau sekadar sensasi melanggar hukum.</p>
+                    </div>
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <h3 class="text-xl font-bold glow-text mb-2">Metode</h3>
+                        <p>Exploit, phishing, DDoS, malware, social engineering, dan berbagai teknik canggih lainnya.</p>
+                    </div>
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <h3 class="text-xl font-bold glow-text mb-2">Risiko</h3>
+                        <p>Hukuman penjara, denda besar, dan larangan mengakses teknologi komputer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="terminal p-6 rounded-lg">
+                <h2 class="text-2xl font-bold glow-text mb-4">Kasus BLACK HAT Terkenal</h2>
+                <div class="space-y-6">
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <h3 class="text-xl font-bold glow-text mb-2">Kevin Mitnick</h3>
+                        <p>Dikenal sebagai "The Condor", menembus sistem NASA, Nokia, dan Motorola tahun 1990-an.</p>
+                    </div>
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <h3 class="text-xl font-bold glow-text mb-2">Anonymous</h3>
+                        <p>Kelompok hacktivist yang melakukan serangan cyber terhadap pemerintah dan perusahaan besar.</p>
+                    </div>
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <h3 class="text-xl font-bold glow-text mb-2">WannaCry (2017)</h3>
+                        <p>Ransomware yang menginfeksi lebih dari 200.000 komputer di 150 negara.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <div class="terminal p-6 rounded-lg">
+                <h2 class="text-2xl font-bold glow-text mb-4">Alat BLACK HAT Populer</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="terminal p-2 rounded w-16 h-16 flex items-center justify-center">
+                                    <span class="text-xs">EXE</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold glow-text mb-1">Metasploit</h3>
+                                <p class="text-sm">Framework untuk pengembangan dan eksekusi exploit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="terminal p-2 rounded w-16 h-16 flex items-center justify-center">
+                                    <span class="text-xs">RAT</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold glow-text mb-1">DarkComet</h3>
+                                <p class="text-sm">Remote Access Trojan populer di kalangan black hat.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="terminal p-2 rounded w-16 h-16 flex items-center justify-center">
+                                    <span class="text-xs">DDoS</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold glow-text mb-1">LOIC</h3>
+                                <p class="text-sm">Alat untuk melakukan serangan Denial-of-Service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mr-4">
+                                <div class="terminal p-2 rounded w-16 h-16 flex items-center justify-center">
+                                    <span class="text-xs">SQLi</span>
+                                </div>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold glow-text mb-1">SQLMap</h3>
+                                <p class="text-sm">Alat otomatisasi injeksi SQL untuk mengambil alih database.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="terminal p-6 rounded-lg mb-16">
+            <h2 class="text-2xl font-bold glow-text mb-4">Statistik Kejahatan Cyber</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                    <div class="text-3xl font-bold glow-text">73%</div>
+                    <div class="text-sm">Serangan oleh aktor kriminal</div>
+                </div>
+                <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                    <div class="text-3xl font-bold glow-text">$6T</div>
+                    <div class="text-sm">Kerugian global pada 2023</div>
+                </div>
+                <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                    <div class="text-3xl font-bold glow-text">93%</div>
+                    <div class="text-sm">Perusahaan pernah diretas</div>
+                </div>
+                <div class="hacker-card p-4 rounded-lg bg-gray-900">
+                    <div class="text-3xl font-bold glow-text">41%</div>
+                    <div class="text-sm">Serangan phishing</div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 text-sm mt-12">
+            <div class="terminal inline-block p-4 rounded-lg">
+                <div class="code-animation">[⚠] Hacking tanpa izin adalah tindakan kriminal</div>
+                <div class="code-animation mt-2">[ℹ] Gunakan keterampilan untuk tujuan etis</div>
+            </div>
+            <p class="mt-4">&copy; 2023 Cybersecurity Awareness. Konten ini hanya untuk tujuan edukasi.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Matrix effect inspirasi
+        document.addEventListener('DOMContentLoaded', function() {
+            const hackerCards = document.querySelectorAll('.hacker-card');
+            hackerCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.querySelectorAll('div, p, h3').forEach(el => {
+                        el.style.textShadow = '0 0 5px #0f0';
+                    });
+                });
+                card.addEventListener('mouseleave', function() {
+                    this.querySelectorAll('div, p, h3').forEach(el => {
+                        el.style.textShadow = '';
+                    });
+                });
+            });
+            
+            // Efek terminal bergerak
+            const terminals = document.querySelectorAll('.terminal');
+            terminals.forEach(terminal => {
+                terminal.addEventListener('mousemove', function(e) {
+                    const x = e.clientX / window.innerWidth;
+                    const y = e.clientY / window.innerHeight;
+                    this.style.transform = `perspective(1000px) rotateX(${(y - 0.5) * 5}deg) rotateY(${(x - 0.5) * -5}deg)`;
+                });
+                terminal.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
