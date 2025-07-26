@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Blackhat Hacker</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .terminal {
+            font-family: 'Courier New', monospace;
+            background-color: #000;
+            color: #0f0;
+            padding: 20px;
+            border-radius: 5px;
+            height: 300px;
+            overflow-y: auto;
+        }
+        .terminal-input {
+            display: flex;
+            margin-top: 10px;
+        }
+        .prompt {
+            color: #0f0;
+            margin-right: 10px;
+        }
+        .cmd-input {
+            background-color: transparent;
+            border: none;
+            color: #0f0;
+            width: 100%;
+            outline: none;
+        }
+        .hacker-card {
+            transition: all 0.3s;
+        }
+        .hacker-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 0, 0.3);
+        }
+        .progress-bar {
+            height: 5px;
+            background-color: #333;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background-color: #f00;
+            width: 0%;
+            transition: width 0.5s;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="container mx-auto px-4 py-8">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-red-500 mb-4">Dunia Gelap Blackhat Hacker</h1>
+            <p class="text-xl text-gray-400">Memahami teknik peretasan dan bagaimana melindungi diri Anda</p>
+        </header>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-red-400 mb-6">Apa Itu Blackhat Hacker?</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-6 bg-gray-800 rounded-lg hacker-card">
+                    <img src="https://placehold.co/600x400/222222/ff0000?text=Blackhat+Hacker" alt="Siluet hacker dengan topeng dan latar belakang merah gelap" class="w-full rounded-md mb-4">
+                    <h3 class="text-xl font-semibold mb-3">Definisi</h3>
+                    <p class="text-gray-300">Blackhat hacker adalah peretas yang menggunakan kemampuannya untuk tujuan jahat seperti mencuri data, menyebarkan malware, atau merusak sistem tanpa izin. Mereka melanggar hukum untuk keuntungan pribadi atau tujuan kriminal.</p>
+                </div>
+                <div class="p-6 bg-gray-800 rounded-lg hacker-card">
+                    <h3 class="text-xl font-semibold mb-3">Motivasi</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>Keuntungan finansial (pencurian data kartu kredit, ransomware)</li>
+                        <li>Spionase industri atau politik</li>
+                        <li>Balas dendam atau vandalisme</li>
+                        <li>Prestise dalam komunitas bawah tanah</li>
+                    </ul>
+                    <div class="mt-6">
+                        <h4 class="font-semibold mb-2">Teknik Umum:</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-red-900 px-3 py-1 rounded-full text-sm">Phishing</span>
+                            <span class="bg-red-900 px-3 py-1 rounded-full text-sm">Malware</span>
+                            <span class="bg-red-900 px-3 py-1 rounded-full text-sm">DDoS</span>
+                            <span class="bg-red-900 px-3 py-1 rounded-full text-sm">SQL Injection</span>
+                            <span class="bg-red-900 px-3 py-1 rounded-full text-sm">Exploit Zero-Day</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-red-400 mb-6">Simulasi Peretasan</h2>
+            <div class="bg-gray-800 rounded-lg p-6">
+                <h3 class="text-xl font-semibold mb-4">Terminal Peretas</h3>
+                <div class="terminal mb-6" id="terminal-output">
+                    <div>Starting hacking sequence...</div>
+                    <div>Initializing exploit toolkit...</div>
+                    <div>Scanning target network...</div>
+                </div>
+                
+                <div class="terminal-input">
+                    <span class="prompt">root@blackhat:~#</span>
+                    <input type="text" class="cmd-input" id="cmd-input" placeholder="Masukkan perintah hacking...">
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="font-semibold mb-2">Proses Peretasan:</h4>
+                    <div class="progress-bar">
+                        <div class="progress" id="hack-progress"></div>
+                    </div>
+                    <div class="flex justify-between mt-2 text-sm text-gray-400">
+                        <span>0%</span>
+                        <span>25%</span>
+                        <span>50%</span>
+                        <span>75%</span>
+                        <span>100%</span>
+                    </div>
+                </div>
+                
+                <button id="start-hack" class="mt-6 bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded">
+                    Mulai Simulasi Peretasan
+                </button>
+            </div>
+        </section>
+
+        <section class="mb-16">
+            <h2 class="text-2xl font-bold text-red-400 mb-6">Kasus Nyata Blackhat Hacker</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-gray-800 rounded-lg overflow-hidden hacker-card">
+                    <img src="https://placehold.co/600x400/222222/ff0000?text=WannaCry" alt="Layar komputer terkunci oleh ransomware WannaCry dengan pesan tebusan" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">WannaCry Ransomware</h3>
+                        <p class="text-gray-300 text-sm">Serangan ransomware tahun 2017 yang menginfeksi lebih dari 200.000 komputer di 150 negara, menuntut pembayaran Bitcoin.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden hacker-card">
+                    <img src="https://placehold.co/600x400/222222/ff0000?text=Equifax" alt="Grafik data yang bocor dengan latar belakang merah gelap" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Equifax Breach</h3>
+                        <p class="text-gray-300 text-sm">Kebocoran data 2017 yang mengekspos informasi sensitif dari 147 juta konsumen karena kerentanan yang tidak ditambal.</p>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg overflow-hidden hacker-card">
+                    <img src="https://placehold.co/600x400/222222/ff0000?text=Dark+Web" alt="Jaringan komputer bawah tanah dengan koneksi yang rumit" class="w-full h-48 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Pasar Dark Web</h3>
+                        <p class="text-gray-300 text-sm">Blackhat hacker sering menjual data curian, exploit, dan malware di pasar gelap di dark web menggunakan cryptocurrency.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-gray-800 rounded-lg p-6 mb-16">
+            <h2 class="text-2xl font-bold text-red-400 mb-4">Proteksi dari Blackhat Hacker</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Untuk Individu:</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>Gunakan password kuat dan unik untuk setiap akun</li>
+                        <li>Aktifkan autentikasi dua faktor (2FA)</li>
+                        <li>Update perangkat lunak secara teratur</li>
+                        <li>Hati-hati dengan email/phishing</li>
+                        <li>Gunakan VPN di jaringan publik</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-3">Untuk Bisnis:</h3>
+                    <ul class="list-disc pl-5 text-gray-300 space-y-2">
+                        <li>Pelatihan awareness cybersecurity untuk karyawan</li>
+                        <li>Firewall dan sistem deteksi intrusi</li>
+                        <li>Enkripsi data sensitif</li>
+                        <li>Backup data rutin</li>
+                        <li>Patch management yang ketat</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center text-gray-500 py-8 border-t border-gray-800">
+            <p>⚠️ Informasi ini hanya untuk tujuan pendidikan. Aktivitas hacking tanpa izin adalah ilegal.</p>
+            <p class="mt-2">© 2023 Cybersecurity Awareness</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const terminalOutput = document.getElementById('terminal-output');
+            const cmdInput = document.getElementById('cmd-input');
+            const startHackBtn = document.getElementById('start-hack');
+            const hackProgress = document.getElementById('hack-progress');
+            
+            const commands = {
+                'scan': 'Memindai jaringan target...\nDitemukan 3 sistem rentan',
+                'exploit': 'Mengeksploitasi kerentanan CVE-2023-1234...\nPayload berhasil diinjeksi',
+                'access': 'Mendapatkan akses root...\nSistem sepenuhnya dikompromikan',
+                'dump': 'Mengambil data sensitif...\nDatabase berhasil diekstraksi (3.2GB)',
+                'clear': 'Membersihkan jejak...\nLogs terhapus',
+                'help': 'Perintah tersedia:\n- scan\n- exploit\n- access\n- dump\n- clear'
+            };
+            
+            // Simulasi terminal
+            cmdInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    const cmd = this.value.trim().toLowerCase();
+                    this.value = '';
+                    
+                    if (commands[cmd]) {
+                        addToTerminal(`root@blackhat:~# ${cmd}\n${commands[cmd]}`);
+                    } else {
+                        addToTerminal(`root@blackhat:~# ${cmd}\nCommand not found. Type 'help' for available commands.`);
+                    }
+                }
+            });
+            
+            // Simulasi proses hacking
+            startHackBtn.addEventListener('click', function() {
+                this.disabled = true;
+                let progress = 0;
+                
+                addToTerminal('\nMemulai simulasi peretasan kompleks...');
+                
+                const hackInterval = setInterval(() => {
+                    progress += 5;
+                    hackProgress.style.width = `${progress}%`;
+                    
+                    if (progress % 25 === 0) {
+                        addToTerminal(getHackStatus(progress));
+                    }
+                    
+                    if (progress >= 100) {
+                        clearInterval(hackInterval);
+                        addToTerminal('\n✅ Sistem berhasil diretas! Akses penuh diperoleh.');
+                        startHackBtn.disabled = false;
+                    }
+                }, 300);
+            });
+            
+            function addToTerminal(text) {
+                const div = document.createElement('div');
+                div.textContent = text;
+                terminalOutput.appendChild(div);
+                terminalOutput.scrollTop = terminalOutput.scrollHeight;
+            }
+            
+            function getHackStatus(progress) {
+                const statuses = {
+                    25: 'Mengidentifikasi kerentanan...',
+                    50: 'Mengeksploitasi celah keamanan...',
+                    75: 'Mengambil alih kontrol sistem...',
+                    100: 'Membersihkan jejak aktivitas...'
+                };
+                return statuses[progress];
+            }
+        });
+    </script>
+</body>
+</html>
